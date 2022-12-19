@@ -1,6 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Foundry User Interface
 
-## Getting Started
+## Description
+This is a User Interface (UI) for executing commands via the [cast](https://book.getfoundry.sh/cast/?highlight=cast#how-to-use-cast) command line application.
+This repo should be inside a project bootstrapped via the `forge init` command. Cast commands are executed one directory above/ in the parent folder of this repo. 
+
+## Getting started
+
 
 First, run the development server:
 
@@ -32,5 +37,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## TO DO ..
