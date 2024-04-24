@@ -1,10 +1,17 @@
-# Foundry User Interface
+# Foundry Dev Tool
+
+## Background
+[Foundry](https://github.com/foundry-rs/foundry) is a new smart contract development tool for EVM chains that provides significant performance improvements compared to traditional frameworks such as Hardhat.
+
+[Cast](https://book.getfoundry.sh/cast/?highlight=cast#how-to-use-cast) is Foundry's command-line tool for performing Ethereum RPC calls.
 
 ## Description
-This is a User Interface (UI) for executing commands via the [cast](https://book.getfoundry.sh/cast/?highlight=cast#how-to-use-cast) command line application.
-This repo should be inside a project bootstrapped via the `forge init` command. Cast commands are executed one directory above/ in the parent folder of this repo. 
+This project is a developer tool which allows the execution of cast commands via an intuitive user interface (UI). This is more seamless compared to manually executing calls by typing in the CLI.
+
 
 ## Getting started
+
+This repo should be inside a project bootstrapped via the `forge init` command. Cast commands are executed one directory above/ in the parent folder of this repo. 
 
 
 First, run the development server:
