@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 import fetch from "isomorphic-unfetch";
 
@@ -34,7 +34,7 @@ export default function Home() {
       abi: abi,
       rpcUrl: rpcUrl,
     };
-    console.log(payload)
+    console.log(payload);
     const response = await fetch("/api/server", {
       method: "POST",
       body: JSON.stringify(payload),
@@ -105,28 +105,28 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          <a href="https://book.getfoundry.sh/">Foundry</a> Dev Tool
-        </h1>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>
+            <a href="https://book.getfoundry.sh/">Foundry</a> Dev Tool
+          </h1>
+          <p className={styles.subTitle}>
+            ERC20{" "}
+            <Link className={styles.link} href="/erc20">
+              Tests -&gt;
+            </Link>
+          </p>
+        </div>
 
-      
-          <div className={styles.infoBox}>
-            <p className={styles.description}>
-              For RPC calls the following fields are required:{" "}
-            </p>
-            <ol>1*. Address of the contract to query</ol>
-            <ol>2*. Function name & return type, e.g balanceOf()(uint256)</ol>
-            <ol>3. Argument type and value if any, e.g address 0xcbe..</ol>
-            <ol>4*. RPC url</ol>
-            <ol>5. Block Number to execute query</ol>
-          </div>
-
-          <div className={styles.infoBox}>
-            <p className={styles.description}>
-              ERC20 <Link className={styles.link} href="/erc20"> Tests </Link>
-            </p>
-          </div>
- 
+        <div className={styles.infoBox}>
+          <p className={styles.description}>
+            Fill in the following fields for performing RPC calls:{" "}
+          </p>
+          <ol>1. Address* of the contract to query</ol>
+          <ol>2. Function name & return type* (e.g balanceOf()(uint256))</ol>
+          <ol>3. Argument type and value if any (e.g address 0xcbe..)</ol>
+          <ol>4. RPC url</ol>
+          <ol>5. Block Number to execute query</ol>
+        </div>
 
         <form
           onSubmit={(event) => {
@@ -137,7 +137,7 @@ export default function Home() {
           <div className={styles.gridContainer}>
             <div className={styles.grid}>
               <div className={styles.card}>
-                <p>Address:</p>
+                <p>Address*:</p>
                 <input
                   className={styles.input}
                   type="text"
@@ -150,7 +150,7 @@ export default function Home() {
 
             <div className={styles.grid}>
               <div className={styles.card}>
-                <p>Function Name:</p>
+                <p>Function Name & Return type*:</p>
                 <input
                   className={styles.input}
                   type="text"
@@ -178,7 +178,7 @@ export default function Home() {
 
             <div className={styles.grid}>
               <div className={styles.card}>
-                <p>Block Number:</p>
+                <p>Block Number (Optional):</p>
                 <input
                   className={styles.input}
                   type="number"
@@ -193,7 +193,7 @@ export default function Home() {
           <div className={styles.gridContainer}>
             <div className={styles.grid}>
               <div className={styles.card}>
-                <p>Contract ABI:</p>
+                <p>Contract ABI (Optional):</p>
                 <input
                   className={styles.input}
                   type="text"
@@ -206,7 +206,7 @@ export default function Home() {
 
             <div className={styles.grid}>
               <div className={styles.card}>
-                <p>RPC url:</p>
+                <p>RPC url(Optional):</p>
                 <input
                   className={styles.input}
                   type="text"

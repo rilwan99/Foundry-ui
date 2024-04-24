@@ -14,6 +14,12 @@
   align-items: center;
 }
 
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -34,6 +40,11 @@
 .title,
 .description {
   text-align: center;
+}
+
+.subTitle {
+  font-size: 1rem; /* Smaller font size for ERC20 Tests */
+  margin-left: 3px;
 }
 
 .description {
@@ -134,7 +145,6 @@
 
 .link {
   color: #0070f3;
-  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
