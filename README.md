@@ -14,7 +14,7 @@ This project introduces a graphical user interface (GUI) to execute Cast command
 - **Enhanced Customizability**: Users can input additional parameters such as argument values and types, contract ABI, or specific block numbers to obtain more tailored responses.
 
 Upon submission, the application executes the Cast command one directory level above the current directory, captures the CLI response, and displays it on the frontend UI.
-![UI Screenshot](public/landing.png)
+![UI Screenshot](/public/home.png)
 
 
 
